@@ -1,14 +1,14 @@
 namespace DataStrucAndAlgo.Interfaces
 {
     /// <summary>
-    /// Interface for a generic list.
+    /// Interface for my generic list.
     /// </summary>
     public interface IMyList<T>
     {
         /// <summary>
         /// Gets the number of items in the list.
         /// </summary>
-        int Count { get; }
+        public int Count { get; }
 
         /// <summary>
         /// Adds an item at a specific index of the list.
