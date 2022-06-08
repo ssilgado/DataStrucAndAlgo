@@ -5,8 +5,8 @@ namespace DataStrucAndAlgo.Test.UnitTest;
 
 public class MyLinkedListTests : MyListTests
 {
-    protected override IMyList<int> GetMyListInstance()
+    protected override IMyList<int?> GetMyListInstance()
     {
-        return new MyLinkedList<int>();
+        return new MyLinkedList<int?>();
     }
 }

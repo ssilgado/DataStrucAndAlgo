@@ -5,7 +5,7 @@ namespace DataStrucAndAlgo.Implementations
 {
     public abstract class MyListTests
     {
-        protected abstract IMyList<int> GetMyListInstance();
+        protected abstract IMyList<int?> GetMyListInstance();
 
         [Fact]
         public void Constructor_EmptyList_ZeroCount()
@@ -55,6 +55,23 @@ namespace DataStrucAndAlgo.Implementations
 
             // Act
             var result = list.Contains(value);
+
+            // Assert
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void Contains_SingleNullValue_ReturnsTrue()
+        {
+            // Arrange
+            var list = GetMyListInstance();
+            list.Add(1);
+            list.Add(2);
+            list.Add(null);
+            list.Add(10);
+
+            // Act
+            var result = list.Contains(null);
 
             // Assert
             Assert.True(result);

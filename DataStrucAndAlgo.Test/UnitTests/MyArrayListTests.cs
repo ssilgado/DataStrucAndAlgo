@@ -5,8 +5,8 @@ namespace DataStrucAndAlgo.Test.UnitTest;
 
 public class MyArrayListTests : MyListTests
 {
-    protected override IMyList<int> GetMyListInstance()
+    protected override IMyList<int?> GetMyListInstance()
     {
-        return new MyArrayList<int>();
+        return new MyArrayList<int?>();
     }
 }
