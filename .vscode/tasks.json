@@ -6,11 +6,63 @@
         {
             "label": "test",
             "command": "dotnet",
-            "type": "shell",
+            "type": "process",
             "group": "test",
             "args": [
                 "test",
                 "${workspaceFolder}/DataStrucAndAlgo.Test/DataStrucAndAlgo.Test.csproj"
+            ],
+            "options": {
+                "env": {
+                    "VSTEST_HOST_DEBUG": "1"
+                }
+            },
+            "problemMatcher": [
+                {
+                    "pattern": [
+                        {
+                            "regexp": ".",
+                            "file": 1,
+                            "location": 2,
+                            "message": 3
+                        }
+                    ],
+                    "background": {
+                        "activeOnStart": true,
+                        "beginsPattern": ".",
+                        "endsPattern": ".",
+                    }
+                }
+            ],
+            "isBackground": true
+        },
+        {
+            "label": "sleep_delay",
+            "type": "shell",
+            "command": "sleep 4",
+            "group": "none",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "new",
+                "close": true
+            }
+        },
+        {
+            "label": "test_delay",
+            "dependsOn": [
+                "test",
+                "sleep_delay"
+            ],
+        },
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/DataStrucAndAlgo.Test/DataStrucAndAlgo.Test.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         }

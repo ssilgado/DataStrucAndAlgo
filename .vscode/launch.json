@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug XUnit Test Cases",
+            "type": "coreclr",
+            "preLaunchTask": "test_delay",
+            "request": "attach",
+        }
+    ]
+}
