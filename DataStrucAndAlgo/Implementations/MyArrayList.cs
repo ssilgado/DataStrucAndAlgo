@@ -23,7 +23,7 @@ namespace DataStrucAndAlgo.Implementations
         public MyArrayList(int initCapacity = 16)
         {
             if (initCapacity <= 0)
-                throw new System.ArgumentException(
+                throw new ArgumentOutOfRangeException(
                     "Capacity cannot be less than or equal to zero"
                 );
 
@@ -78,7 +78,7 @@ namespace DataStrucAndAlgo.Implementations
         public void Remove(int index)
         {
             if (index < 0 || index >= Count)
-                throw new IndexOutOfRangeException();
+                throw new ArgumentOutOfRangeException(nameof(index));
 
             for (int i = index; i < Count - 1; i++)
             {
@@ -93,7 +93,7 @@ namespace DataStrucAndAlgo.Implementations
         {
             for (int i = 0; i < Count; i++)
             {
-                if (_items[i].Equals(item)) return true;
+                if (_items[i]!.Equals(item)) return true;
             }
 
             return false;
@@ -110,7 +110,7 @@ namespace DataStrucAndAlgo.Implementations
         public T Get(int index)
         {
             if (index < 0 || index >= Count)
-                throw new IndexOutOfRangeException();
+                throw new ArgumentOutOfRangeException(nameof(index));
 
             return _items[index];
         }

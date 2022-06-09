@@ -30,7 +30,7 @@ namespace DataStrucAndAlgo.Interfaces
         /// Removes the item at the specified index.
         /// </summary>
         /// <param name="index">The index of the item to remove.</param>
-        /// <exception cref="IndexOutOfRangeException">
+        /// <exception cref="ArgumentOutOfRangeException">
         /// Thrown if the <paramref name="index"/> is out of range.
         /// </exception>
         void Remove(int index);
@@ -54,7 +54,7 @@ namespace DataStrucAndAlgo.Interfaces
         /// </summary>
         /// <param name="index">The index of the item to get.</param>
         /// <returns>The item at the specified index.</returns>
-        /// <exception cref="IndexOutOfRangeException">
+        /// <exception cref="ArgumentOutOfRangeException">
         /// Thrown if the <paramref name="index"/> is out of range.
         /// </exception>
         T Get(int index);

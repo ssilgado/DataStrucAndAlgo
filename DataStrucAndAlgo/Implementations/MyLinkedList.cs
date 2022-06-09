@@ -40,9 +40,9 @@ namespace DataStrucAndAlgo.Implementations
                 var current = Head;
                 for (int i = 0; i < index - 1; i++)
                 {
-                    current = current.Next;
+                    current = current!.Next;
                 }
-                newNode.Next = current.Next;
+                newNode.Next = current!.Next;
                 current.Next = newNode;
             }
 
@@ -68,7 +68,7 @@ namespace DataStrucAndAlgo.Implementations
             var current = Head;
             while (current != null)
             {
-                if (current.Value.Equals(item)) return true;
+                if (current.Value!.Equals(item)) return true;
                 current = current.Next;
             }
             return false;
@@ -83,10 +83,10 @@ namespace DataStrucAndAlgo.Implementations
             var current = Head;
             for (int i = 0; i < index; i++)
             {
-                current = current.Next;
+                current = current!.Next;
             }
 
-            return current.Value;
+            return current!.Value;
         }
 
         /// <inheritdoc />
@@ -97,16 +97,16 @@ namespace DataStrucAndAlgo.Implementations
             
             if (index == 0)
             {
-                Head = Head.Next;
+                Head = Head!.Next;
             }
             else
             {
                 var current = Head;
                 for (int i = 0; i < index - 1; i++)
                 {
-                    current = current.Next;
+                    current = current!.Next;
                 }
-                current.Next = current.Next.Next;
+                current!.Next = current.Next!.Next;
             }
 
             Count--;
