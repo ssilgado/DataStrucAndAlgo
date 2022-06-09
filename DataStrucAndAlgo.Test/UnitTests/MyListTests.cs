@@ -318,7 +318,7 @@ namespace DataStrucAndAlgo.Implementations
             Assert.Throws<ArgumentOutOfRangeException>(action);
         }
 
-        private bool ListEquals<T>(IMyList<T> l1, T[] l2)
+        internal bool ListEquals<T>(IMyList<T> l1, T[] l2)
         {
             if (l1.Count != l2.Length) return false;
             for (var i = 0; i < l1.Count; i++)

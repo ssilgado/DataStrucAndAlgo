@@ -23,4 +23,24 @@ public class MyArrayListTests : MyListTests
         // Act & Assert
         Assert.Throws<ArgumentOutOfRangeException>(action);
     }
+
+    [Fact]
+    public void EnsureCapacity_AddEnoughItems_DoesNotThrowException()
+    {
+        // Arrange
+        var list = new MyArrayList<int?>(initCapacity: 1);
+        int numberOfItems = 32;
+        var expectedList = new int?[numberOfItems];
+
+        // Act
+        for (int i = 0; i < numberOfItems; i++)
+        {
+            list.Add(i);
+            expectedList[i] = i;
+        }
+        var listEquals = ListEquals(list, expectedList);
+
+        // Assert
+        Assert.True(listEquals);
+    }
 }
