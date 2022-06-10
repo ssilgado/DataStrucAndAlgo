@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStrucAndAlgo", "DataStr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStrucAndAlgo.Test", "DataStrucAndAlgo.Test\DataStrucAndAlgo.Test.csproj", "{F31F4B32-D507-4817-8BA2-5FF613D5CA16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStrucAndAlgo.Benchmark", "DataStrucAndAlgo.Benchmark\DataStrucAndAlgo.Benchmark.csproj", "{EA2FAC83-506C-4219-BA1C-86ACA802C753}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{F31F4B32-D507-4817-8BA2-5FF613D5CA16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F31F4B32-D507-4817-8BA2-5FF613D5CA16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F31F4B32-D507-4817-8BA2-5FF613D5CA16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA2FAC83-506C-4219-BA1C-86ACA802C753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA2FAC83-506C-4219-BA1C-86ACA802C753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA2FAC83-506C-4219-BA1C-86ACA802C753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA2FAC83-506C-4219-BA1C-86ACA802C753}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
