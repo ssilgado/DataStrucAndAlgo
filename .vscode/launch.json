@@ -6,6 +6,18 @@
             "type": "coreclr",
             "preLaunchTask": "test_delay",
             "request": "attach",
+        },
+        {
+            "name": "Run Benchmarks",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build Release",
+            "program": "${workspaceFolder}/DataStrucAndAlgo.Benchmark/bin/Release/net6.0/DataStrucAndAlgo.Benchmark.dll",
+            "args": [
+            ],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
         }
     ]
 }

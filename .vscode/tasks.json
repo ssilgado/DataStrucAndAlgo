@@ -55,14 +55,16 @@
             ],
         },
         {
-            "label": "build",
+            "label": "build Release",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/DataStrucAndAlgo.Test/DataStrucAndAlgo.Test.csproj",
+                "${workspaceFolder}/DataStrucAndAlgo.Benchmark/DataStrucAndAlgo.Benchmark.csproj",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/consoleloggerparameters:NoSummary",
+                "-c",
+                "Release"
             ],
             "problemMatcher": "$msCompile"
         }
