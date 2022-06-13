@@ -7,7 +7,7 @@ namespace DataStrucAndAlgo.Implementations
     /// </summary>
     public class MyLinkedList<T> : IMyList<T>
     {
-        private Node<T>? Head;
+        private Node<T>? _head;
 
         /// <inheritdoc />
         public int Count { get; private set; }
@@ -18,7 +18,7 @@ namespace DataStrucAndAlgo.Implementations
         /// </summary>
         public MyLinkedList()
         {
-            Head = null;
+            _head = null;
             Count = 0;
         }
 
@@ -32,12 +32,12 @@ namespace DataStrucAndAlgo.Implementations
 
             if (index == 0)
             {
-                newNode.Next = Head;
-                Head = newNode;
+                newNode.Next = _head;
+                _head = newNode;
             }
             else
             {
-                var current = Head;
+                var current = _head;
                 for (int i = 0; i < index - 1; i++)
                 {
                     current = current!.Next;
@@ -58,14 +58,14 @@ namespace DataStrucAndAlgo.Implementations
         /// <inheritdoc />
         public void Clear()
         {
-            Head = null;
+            _head = null;
             Count = 0;
         }
 
         /// <inheritdoc />
         public bool Contains(T item)
         {
-            var current = Head;
+            var current = _head;
             while (current != null)
             {
                 if (current.Value!.Equals(item)) return true;
@@ -80,7 +80,7 @@ namespace DataStrucAndAlgo.Implementations
             if (index < 0 || index >= Count)
                 throw new ArgumentOutOfRangeException(nameof(index));
             
-            var current = Head;
+            var current = _head;
             for (int i = 0; i < index; i++)
             {
                 current = current!.Next;
@@ -97,11 +97,11 @@ namespace DataStrucAndAlgo.Implementations
             
             if (index == 0)
             {
-                Head = Head!.Next;
+                _head = _head!.Next;
             }
             else
             {
-                var current = Head;
+                var current = _head;
                 for (int i = 0; i < index - 1; i++)
                 {
                     current = current!.Next;
