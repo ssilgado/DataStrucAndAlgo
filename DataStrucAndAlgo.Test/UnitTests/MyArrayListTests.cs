@@ -3,7 +3,7 @@ using DataStrucAndAlgo.Implementations;
 using DataStrucAndAlgo.Interfaces;
 using Xunit;
 
-namespace DataStrucAndAlgo.Test.UnitTest;
+namespace DataStrucAndAlgo.Test.UnitTests;
 
 public class MyArrayListTests : MyListTests
 {

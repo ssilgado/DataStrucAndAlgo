@@ -2,7 +2,7 @@ using System;
 using DataStrucAndAlgo.Interfaces;
 using Xunit;
 
-namespace DataStrucAndAlgo.Implementations
+namespace DataStrucAndAlgo.Test.UnitTests
 {
     public abstract class MyListTests
     {
