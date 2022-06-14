@@ -12,8 +12,12 @@ namespace DataStrucAndAlgo.Implementations
         /// <summary>
         /// Initialize a new instance of the <see cref="MyStack{T}"/> class.
         /// </summary>
+        /// <param name="list">
+        /// The list to use for the stack. The list will be cleared before use.
+        ///</param>
         public MyStack(IMyList<T> list)
         {
+            list.Clear();
             _list = list;
         }
 
